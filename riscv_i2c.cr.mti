@@ -1,0 +1,123 @@
+{C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/datamem.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/datamem.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module datamem
+
+Top level modules:
+	datamem
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/controlunit.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/controlunit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module controlunit
+
+Top level modules:
+	controlunit
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/mux.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/mux.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/alu.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/alu.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/address_decoder.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/address_decoder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module address_decoder
+
+Top level modules:
+	address_decoder
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/instmem.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/instmem.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module instmem
+
+Top level modules:
+	instmem
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/registerfile.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/registerfile.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module registerfile
+
+Top level modules:
+	registerfile
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/adder.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/adder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/cu.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/cu.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cu
+
+Top level modules:
+	cu
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/i2c_Controller.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/i2c_Controller.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module i2c_Master_Controller
+-- Compiling module i2cslave
+-- Compiling module i2c_Controller
+
+Top level modules:
+	i2c_Controller
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/shift_reg.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/shift_reg.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shift_reg
+
+Top level modules:
+	shift_reg
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/pc.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/pc.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pc
+
+Top level modules:
+	pc
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/alucontrol.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/alucontrol.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module alucontrol
+
+Top level modules:
+	alucontrol
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/riscv_i2c.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/riscv_i2c.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module riscv_i2c
+-- Compiling module riscv_i2c_tb
+
+Top level modules:
+	riscv_i2c_tb
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/immext.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/immext.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module immext
+
+Top level modules:
+	immext
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/clk_div.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/clk_div.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clk_div
+
+Top level modules:
+	clk_div
+
+} {} {}} {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/risc_v.v} {1 {vlog -work work -stats=none {C:/Users/Salman Traders/OneDrive/Desktop/New folder (4)/risc_v.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module risc_v
+
+Top level modules:
+	risc_v
+
+} {} {}}

@@ -1,0 +1,119 @@
+module riscv_i2c( 
+input clk,reset
+);
+
+wire [31:0] Addr,RdM,WriteData,ReadData,WriteData_i2c,result;                                 								//memory
+wire WEM,WEI,Rd_sel; 														//Address decoder
+wire [1:0] immsrc;
+wire resultsrc,alusrc,regwrite,pcsrc, memwrite; 
+wire clk_d,sda_out_m;    
+            
+risc_v riscv(
+.clk(clk),
+.reset(reset),
+.ReadData(ReadData),
+.resultsrc(resultsrc),
+.memwrite(memwrite),
+.alusrc(alusrc),
+.regwrite(regwrite),
+.pcsrc(pcsrc),
+.immsrc(immsrc),
+.Addr(Addr),
+.WriteData(WriteData)
+);
+
+address_decoder addr_decode(
+.memWrite(memwrite),
+.Addr(Addr),
+.WEM(WEM),
+.WEI(WEI),
+.Rd_sel(Rd_sel)
+);
+
+shift_reg shift_reg(
+.clk(clk_d),.reset(reset),.enable(WEI),.D(WriteData),.Q(WriteData_i2c)
+);
+
+mux rd_mux(
+.m(RdM),
+.n(sda_out_m),
+.sel(Rd_sel),
+.out(ReadData)
+);
+
+
+datamem DM(
+.mem_addr(Addr),
+.write_data(WriteData),
+.clk(clk_d),
+.memwrite(WEM),
+.read_data(RdM)
+);
+ 
+//I2C Master-slave controller instantiation
+i2c_Controller cont (.i_clk(clk_d),
+.reset_n(reset),
+.rw(memwrite),  
+.i2c_wData(WriteData_i2c),
+.i2c_Data(ReadData),
+.i2c_rData(ReadData)
+);
+
+
+endmodule
+
+module riscv_i2c_tb;
+
+    // Inputs
+    reg clk;
+    reg reset;
+
+    // Outputs
+    wire [31:0] Addr;
+    wire [31:0] RdM, WriteData, ReadData, WriteData_i2c, result;
+    wire WEM, WEI, Rd_sel;
+    wire [1:0] immsrc;
+    wire resultsrc, alusrc, regwrite, pcsrc, memwrite;
+    wire clk_d, sda_out_m;
+
+    // Instantiate the DUT (Device Under Test)
+    riscv_i2c dut (
+        .clk(clk),
+        .reset(reset)
+    );
+
+    // Clock generation
+    always #5 clk = ~clk; // 10 ns clock period (100 MHz)
+
+    // Test procedure
+    initial begin
+        // Initialize signals
+        clk = 0;
+        reset = 1;
+
+        // Apply reset
+        #10 reset = 0;
+        #10 reset = 1;
+
+        // Test sequence
+        #20;
+        
+        // Apply some values to the DUT and observe behavior
+        // Additional signals like Addr and WriteData would be set depending on specific instructions
+        // For now, we?ll just drive clk and reset to test module instantiation and clock synchronization
+
+        // Example stimulus:
+        // Wait for a few clock cycles to observe the output
+        #100;
+        
+        // End simulation
+        $finish;
+    end
+
+    // Monitor the DUT outputs (optional, for debugging purposes)
+    initial begin
+        $monitor("Time=%0t | clk=%b | reset=%b | Addr=%h | RdM=%h | WriteData=%h | ReadData=%h | WEI=%b | WEM=%b",
+                 $time, clk, reset, Addr, RdM, WriteData, ReadData, WEI, WEM);
+    end
+
+endmodule
